@@ -1,26 +1,27 @@
-  
-<template>
+  <template>
 
-<div class="container">
-<h1>Cerberus Team Quiz Results</h1>
-  <div>
+    <div class="container">
 
-    <ul>
+      <div class="jumbotron">
+      <h1>Cerberus Team Quiz Results</h1>
+      <div>
 
-      <div v-for="node in content" v-bind:key="node">
+        <ul>
 
-        <div v-for="key in node" v-bind:key="key.value">
+          <div v-for="node in content" v-bind:key="node" class="result">
 
-          {{ key }}
-        </div>
+            <div v-for="key in node" v-bind:key="key.value">
 
-  <!-- <li v-for="(name, score) in node" v-bind:key=name>{{ name }}: {{ score }} </li> -->
+              {{ key }}
+            </div>
+          </div>
+        </ul>
+      </div>
+      </div>
 
-  </div>
-</ul>
-  </div>
-  </div>
-</template>
+    </div>
+
+  </template>
 
 <script>
 import axios from 'axios';
@@ -75,10 +76,33 @@ export default {
 </script>
 
 <style css>
+
 ul {
     list-style-type: none;
 }
 h1 {
   size: 3rem;
 }
+.result {
+  padding-bottom: 3rem;
+}
+.jumbotron {
+  margin-top: 10rem;
+  opacity: 0.5;
+  background-color: white;
+  width: 50%;
+  justify-content: center;
+  display: inline-block;
+  border-radius: 25px;
+}
+
+.container {
+  display: flex !important;
+  justify-content: center;
+}
+
+body {
+  background-color: black;
+}
+
 </style>
