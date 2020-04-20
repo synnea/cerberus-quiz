@@ -5,10 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "gh-pages-deploy": "node scripts/gh-pages-deploy.js",    
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "execa": "latest",
     "core-js": "^3.6.4",
     "vue": "^2.6.11"
   },
